@@ -37,6 +37,10 @@ git clone https://github.com/Stepan-Warriors/AdBlockFilms.git
 ```
 Далее выполните шаги 3–6, выбрав склонированную папку `AdBlockFilms`.
 
+### Установка на телефон (Android)
+
+Подробная инструкция для смартфонов находится в файле **[MOBILE_GUIDE.md](MOBILE_GUIDE.md)**.
+
 ## Проверка проекта
 
 ```bash
