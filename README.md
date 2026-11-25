@@ -37,9 +37,22 @@ git clone https://github.com/Stepan-Warriors/AdBlockFilms.git
 ```
 Далее выполните шаги 3–6, выбрав склонированную папку `AdBlockFilms`.
 
-### Установка на телефон (Android)
+### Установка на телефон (Android и iOS)
 
-Подробная инструкция для смартфонов находится в файле **[MOBILE_GUIDE.md](MOBILE_GUIDE.md)**.
+#### Android (Kiwi Browser, Lemur Browser, Mises Browser)
+
+Обычный Google Chrome для Android не поддерживает сторонние расширения, но **AdBlockFilms** работает в мобильных браузерах на базе Chromium:
+
+1. Установите **Kiwi Browser** (или **Lemur Browser** / **Mises Browser**) из Google Play.
+2. Скачайте на телефон архив **[AdBlockFilms-v1.0.0.zip](https://github.com/Stepan-Warriors/AdBlockFilms/raw/main/AdBlockFilms-v1.0.0.zip)**.
+3. Откройте меню браузера (`⋮` справа вверху) → **Extensions** (Расширения).
+4. Включите **Developer mode** (Режим разработчика).
+5. Нажмите **`+ (from .zip/.crx/.user.js)`** (в Kiwi) или выберите загрузку `.zip` / распакованной папки и укажите скачанный `AdBlockFilms-v1.0.0.zip`.
+6. Готово — управлять расширением можно через меню `⋮` → **AdBlockFilms**.
+
+#### iPhone и iPad (iOS)
+
+На iOS расширения формата Chrome Manifest V3 не поддерживаются ни в одном браузере (все браузеры на iOS работают на движке WebKit и допускают только расширения для Safari из App Store).
 
 ## Проверка проекта
 
