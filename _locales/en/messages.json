@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "AdBlockFilms — Video & Movie Ad Skipper"
+  },
+  "extDescription": {
+    "message": "Removes and auto-skips video ads (pre-rolls, mid-rolls, VAST, YouTube, movie players), blocks popunders and overlay banners."
+  },
+  "actionTitle": {
+    "message": "AdBlockFilms — Video Ad Blocker"
+  }
+}

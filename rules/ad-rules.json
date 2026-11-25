@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "priority": 20,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/src/content/ima-stub.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 20,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/src/content/ima-stub.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "||s0.2mdn.net/instream/html5/ima3",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "requestDomains": [
+        "doubleclick.net",
+        "googleadservices.com",
+        "adservice.google.com",
+        "pagead2.googlesyndication.com",
+        "tpc.googlesyndication.com",
+        "ade.googlesyndication.com",
+        "2mdn.net",
+        "innovid.com",
+        "serving-sys.com",
+        "adsafeprotected.com",
+        "moatads.com"
+      ],
+      "resourceTypes": ["script", "xmlhttprequest", "media", "sub_frame", "image", "ping", "other"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "requestDomains": [
+        "an.yandex.ru",
+        "ads.adfox.ru",
+        "adfox.yandex.ru",
+        "yandexadexchange.net",
+        "ad.mail.ru",
+        "rs.mail.ru",
+        "r.mail.ru",
+        "target.my.com",
+        "trg.my.com",
+        "adriver.ru",
+        "videonow.ru",
+        "nativeroll.tv",
+        "buzzoola.com",
+        "betweendigital.com",
+        "vidroll.ru",
+        "recreativ.ru",
+        "mgid.com",
+        "marketgid.com",
+        "smi2.ru",
+        "acint.net"
+      ],
+      "resourceTypes": ["script", "xmlhttprequest", "media", "sub_frame", "image", "ping", "other"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||yastatic.net/pcode/adfox/",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||yandex.ru/ads/",
+      "resourceTypes": ["script", "xmlhttprequest", "media", "sub_frame", "ping", "other"]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "requestDomains": [
+        "springserve.com",
+        "spotxchange.com",
+        "spotx.tv",
+        "tremorhub.com",
+        "teads.tv",
+        "freewheel.tv",
+        "fwmrm.net",
+        "lkqd.net",
+        "beachfront.com",
+        "unrulymedia.com",
+        "pubmatic.com",
+        "rubiconproject.com",
+        "openx.net",
+        "adnxs.com",
+        "casalemedia.com",
+        "indexww.com",
+        "smartadserver.com",
+        "criteo.com",
+        "criteo.net",
+        "taboola.com",
+        "outbrain.com"
+      ],
+      "resourceTypes": ["script", "xmlhttprequest", "media", "sub_frame", "image", "ping", "other"]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "requestDomains": [
+        "exoclick.com",
+        "realsrv.com",
+        "tsyndicate.com",
+        "twinrdsrv.com",
+        "juicyads.com",
+        "trafficjunky.com",
+        "trafficstars.com",
+        "popads.net",
+        "popcash.net",
+        "propellerads.com",
+        "monetag.com",
+        "onclickperformance.com",
+        "clickadu.com",
+        "hilltopads.net",
+        "admaven.com",
+        "adsterra.com",
+        "highperformanceformat.com",
+        "effectivegatecpm.com",
+        "topcreativeformat.com"
+      ],
+      "resourceTypes": ["script", "xmlhttprequest", "media", "sub_frame", "image", "ping", "other"]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/vast.xml",
+      "resourceTypes": ["xmlhttprequest", "media", "other"]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/vmap.xml",
+      "resourceTypes": ["xmlhttprequest", "media", "other"]
+    }
+  }
+]

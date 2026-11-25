@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "short_name": "AdBlockFilms",
+  "version": "1.0.0",
+  "description": "__MSG_extDescription__",
+  "default_locale": "ru",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    },
+    "default_title": "__MSG_actionTitle__"
+  },
+  "options_page": "src/options/options.html",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "video_ad_rules",
+        "enabled": true,
+        "path": "rules/ad-rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/page-interceptor.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "css": ["src/content/ad-hiding.css"],
+      "js": ["src/content/dom-ad-skipper.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "ISOLATED"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/content/ima-stub.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

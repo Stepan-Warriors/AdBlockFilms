@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdBlockFilms</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <img src="../../icons/icon32.png" alt="AdBlockFilms" class="brand-icon" />
+        <div>
+          <h1 class="brand-title">AdBlockFilms</h1>
+          <span id="status-pill" class="status-pill status-active">Защита активна</span>
+        </div>
+      </div>
+      <button id="power-btn" class="power-btn active" title="Включить или приостановить везде" aria-label="Питание">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <path d="M12 2v10" />
+          <path d="M18.36 6.64a9 9 0 1 1-12.73 0" />
+        </svg>
+      </button>
+    </header>
+
+    <section class="site-card">
+      <div class="site-info">
+        <span class="site-label">Текущий сайт</span>
+        <strong id="site-host" class="site-host">—</strong>
+      </div>
+      <button id="site-toggle-btn" class="site-toggle-btn">Отключить на сайте</button>
+    </section>
+
+    <section class="stats-hero">
+      <div class="stat-main">
+        <span class="stat-value" id="stat-tab">0</span>
+        <span class="stat-caption">на вкладке</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-main">
+        <span class="stat-value" id="stat-total">0</span>
+        <span class="stat-caption">всего убрано</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-main">
+        <span class="stat-value accent" id="stat-time">0м</span>
+        <span class="stat-caption">сэкономлено</span>
+      </div>
+    </section>
+
+    <section class="stats-breakdown">
+      <div class="mini-stat">
+        <span class="mini-num" id="stat-video">0</span>
+        <span class="mini-lbl">Видеореклама</span>
+      </div>
+      <div class="mini-stat">
+        <span class="mini-num" id="stat-vast">0</span>
+        <span class="mini-lbl">VAST / прероллы</span>
+      </div>
+      <div class="mini-stat">
+        <span class="mini-num" id="stat-popunder">0</span>
+        <span class="mini-lbl">Popunder</span>
+      </div>
+      <div class="mini-stat">
+        <span class="mini-num" id="stat-overlay">0</span>
+        <span class="mini-lbl">Баннеры</span>
+      </div>
+    </section>
+
+    <section class="toggles-card">
+      <label class="toggle-row">
+        <span class="toggle-text">
+          <strong>Автопропуск видеорекламы</strong>
+          <small>Кликать «Пропустить» и ускорять ролики</small>
+        </span>
+        <input type="checkbox" id="opt-skipVideoAds" />
+        <span class="switch"></span>
+      </label>
+
+      <label class="toggle-row">
+        <span class="toggle-text">
+          <strong>Глушить звук на рекламе</strong>
+          <small>Автоматически возвращать после рекламы</small>
+        </span>
+        <input type="checkbox" id="opt-muteDuringAds" />
+        <span class="switch"></span>
+      </label>
+
+      <label class="toggle-row">
+        <span class="toggle-text">
+          <strong>Вырезать VAST и прероллы</strong>
+          <small>Чистка PlayerJS, IMA, JSON/XML плееров</small>
+        </span>
+        <input type="checkbox" id="opt-blockVast" />
+        <span class="switch"></span>
+      </label>
+
+      <label class="toggle-row">
+        <span class="toggle-text">
+          <strong>Блокировать Popunder-клики</strong>
+          <small>Защита от скрытых вкладок поверх плеера</small>
+        </span>
+        <input type="checkbox" id="opt-blockPopunder" />
+        <span class="switch"></span>
+      </label>
+    </section>
+
+    <footer class="footer">
+      <button id="open-options-btn" class="footer-btn primary">Настройки и исключения</button>
+      <button id="reset-stats-btn" class="footer-btn">Сбросить</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

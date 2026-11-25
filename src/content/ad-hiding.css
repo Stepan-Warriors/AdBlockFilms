@@ -1,0 +1,71 @@
+/* AdBlockFilms cosmetic hiding for video overlays and player ad banners */
+/* Disabled automatically when html[data-abf-disabled="1"] is set */
+
+:root:not([data-abf-disabled="1"]) ytd-ad-slot-renderer,
+:root:not([data-abf-disabled="1"]) ytd-banner-promo-renderer,
+:root:not([data-abf-disabled="1"]) ytd-statement-banner-renderer,
+:root:not([data-abf-disabled="1"]) ytd-in-feed-ad-layout-renderer,
+:root:not([data-abf-disabled="1"]) ytd-promoted-sparkles-web-renderer,
+:root:not([data-abf-disabled="1"]) ytd-display-ad-renderer,
+:root:not([data-abf-disabled="1"]) ytd-companion-slot-renderer,
+:root:not([data-abf-disabled="1"]) ytd-player-legacy-desktop-watch-ads-renderer,
+:root:not([data-abf-disabled="1"]) ytd-action-companion-ad-renderer,
+:root:not([data-abf-disabled="1"]) ytd-merch-shelf-renderer,
+:root:not([data-abf-disabled="1"]) #masthead-ad,
+:root:not([data-abf-disabled="1"]) #player-ads,
+:root:not([data-abf-disabled="1"]) .ytp-ad-overlay-container,
+:root:not([data-abf-disabled="1"]) .ytp-ad-overlay-slot,
+:root:not([data-abf-disabled="1"]) .ytp-ad-image-overlay,
+:root:not([data-abf-disabled="1"]) .ytp-ad-text-overlay,
+:root:not([data-abf-disabled="1"]) .ytp-featured-product,
+:root:not([data-abf-disabled="1"]) .vjs-ad-overlay,
+:root:not([data-abf-disabled="1"]) .jw-ad-overlay,
+:root:not([data-abf-disabled="1"]) .pljs-ad-banner,
+:root:not([data-abf-disabled="1"]) [id^="pauseroll"],
+:root:not([data-abf-disabled="1"]) [class*="pauseroll"],
+:root:not([data-abf-disabled="1"]) [class*="ad-pause-banner"],
+:root:not([data-abf-disabled="1"]) [class*="video-ad-overlay"],
+:root:not([data-abf-disabled="1"]) [class*="preroll-banner"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.abf-skip-toast {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483646;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.abf-skip-toast.abf-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.abf-skip-toast-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}

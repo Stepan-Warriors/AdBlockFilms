@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdBlockFilms — Настройки</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="top-bar">
+      <div class="brand">
+        <img src="../../icons/icon48.png" alt="AdBlockFilms" class="logo" />
+        <div>
+          <h1>AdBlockFilms</h1>
+          <p>Тонкая настройка удаления и автопропуска рекламы в видео и онлайн-кинотеатрах</p>
+        </div>
+      </div>
+      <span id="save-indicator" class="save-badge">Сохранено</span>
+    </header>
+
+    <section class="panel">
+      <h2>Режимы защиты</h2>
+
+      <label class="setting-row">
+        <div>
+          <strong>Глобальная защита</strong>
+          <small>Включает или приостанавливает AdBlockFilms на всех сайтах</small>
+        </div>
+        <input type="checkbox" id="opt-enabled" />
+        <span class="switch"></span>
+      </label>
+
+      <label class="setting-row">
+        <div>
+          <strong>Автопропуск и ускорение видеорекламы</strong>
+          <small>Автоматически нажимает «Пропустить рекламу» и мгновенно проматывает несбрасываемые ролики</small>
+        </div>
+        <input type="checkbox" id="opt-skipVideoAds" />
+        <span class="switch"></span>
+      </label>
+
+      <label class="setting-row">
+        <div>
+          <strong>Выключать звук во время рекламы</strong>
+          <small>При появлении рекламы звук отключается и сразу возвращается при старте фильма</small>
+        </div>
+        <input type="checkbox" id="opt-muteDuringAds" />
+        <span class="switch"></span>
+      </label>
+
+      <div class="setting-row">
+        <div>
+          <strong>Скорость перемотки рекламы</strong>
+          <small>Скорость ускорения рекламного ролика, если его нельзя пропустить кнопкой</small>
+        </div>
+        <select id="opt-playbackSpeed" class="select-input">
+          <option value="4">4x (щадящий)</option>
+          <option value="8">8x (быстрый)</option>
+          <option value="16">16x (максимальный)</option>
+        </select>
+      </div>
+
+      <label class="setting-row">
+        <div>
+          <strong>Блокировка VAST / VMAP / IMA / PlayerJS</strong>
+          <small>Очищает прероллы, мидроллы и рекламные теги до начала воспроизведения</small>
+        </div>
+        <input type="checkbox" id="opt-blockVast" />
+        <span class="switch"></span>
+      </label>
+
+      <label class="setting-row">
+        <div>
+          <strong>Защита от Popunder и ложных кликов</strong>
+          <small>Блокирует открытие рекламных вкладок при нажатии Play на видеоплеере</small>
+        </div>
+        <input type="checkbox" id="opt-blockPopunder" />
+        <span class="switch"></span>
+      </label>
+
+      <label class="setting-row">
+        <div>
+          <strong>Удалять баннеры и слои поверх плеера</strong>
+          <small>Скрывает рекламные пауз-баннеры, оверлеи и прозрачные клик-ловушки</small>
+        </div>
+        <input type="checkbox" id="opt-removeOverlays" />
+        <span class="switch"></span>
+      </label>
+
+      <label class="setting-row">
+        <div>
+          <strong>Показывать мини-уведомление при пропуске</strong>
+          <small>Аккуратная плашка в углу экрана, когда реклама была пропущена</small>
+        </div>
+        <input type="checkbox" id="opt-showToast" />
+        <span class="switch"></span>
+      </label>
+    </section>
+
+    <section class="panel">
+      <h2>Исключения (белый список сайтов)</h2>
+      <p class="panel-desc">На указанных доменах и во встроенных в них видеоплеерах AdBlockFilms будет отключён.</p>
+
+      <form id="whitelist-form" class="whitelist-form">
+        <input
+          type="text"
+          id="whitelist-input"
+          placeholder="Например: kinopoisk.ru или youtube.com"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn-primary">Добавить</button>
+      </form>
+
+      <ul id="whitelist-list" class="whitelist-list"></ul>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Общая статистика</h2>
+        <button id="reset-stats-btn" class="btn-secondary">Сбросить статистику</button>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="num" id="total-blocked">0</span>
+          <span class="lbl">Всего устранено реклам</span>
+        </div>
+        <div class="stat-box">
+          <span class="num" id="video-skipped">0</span>
+          <span class="lbl">Видеореклам пропущено</span>
+        </div>
+        <div class="stat-box">
+          <span class="num" id="vast-blocked">0</span>
+          <span class="lbl">VAST / прероллов вырезано</span>
+        </div>
+        <div class="stat-box">
+          <span class="num" id="popunders-blocked">0</span>
+          <span class="lbl">Всплывающих окон остановлено</span>
+        </div>
+        <div class="stat-box">
+          <span class="num" id="overlays-removed">0</span>
+          <span class="lbl">Баннеров поверх плеера убрано</span>
+        </div>
+        <div class="stat-box accent">
+          <span class="num" id="time-saved">0с</span>
+          <span class="lbl">Ориентировочно сэкономлено</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel info-panel">
+      <h2>Как работает AdBlockFilms</h2>
+      <ul>
+        <li><strong>Сетевой фильтр (Manifest V3 DNR):</strong> блокирует известные видеорекламные сети и подменяет Google IMA SDK безопасной заглушкой, чтобы плеер не зависал с ошибкой.</li>
+        <li><strong>Перехватчик в контексте страницы:</strong> обезвреживает VAST/VMAP-ответы, конфигурации PlayerJS/JWPlayer и рекламные блоки YouTube прямо до запуска видео.</li>
+        <li><strong>Умный DOM-пропуск:</strong> работает внутри всех <code>&lt;iframe&gt;</code> плееров, отключает звук на время рекламы, ускоряет её до конца и автоматически нажимает «Пропустить рекламу».</li>
+      </ul>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
