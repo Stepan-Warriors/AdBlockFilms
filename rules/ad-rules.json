@@ -173,5 +173,63 @@
       "urlFilter": "/vmap.xml",
       "resourceTypes": ["xmlhttprequest", "media", "other"]
     }
+  },
+  {
+    "id": 11,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "requestDomains": [
+        "suprion.ru",
+        "video-mech.ru",
+        "bidster.net",
+        "veonadx.com",
+        "mplays.ru",
+        "qtarget.tech",
+        "rutarget.ru",
+        "programmatica.com",
+        "adlook.me",
+        "adlook.tech",
+        "moevideo.net",
+        "moevideo.ru"
+      ],
+      "resourceTypes": ["script", "xmlhttprequest", "media", "sub_frame", "image", "ping", "other"]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "adlkPlayerInit.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 13,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "adLookInit.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 14,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "vpaid_ima3.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 15,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "mstream2inline.js",
+      "resourceTypes": ["script"]
+    }
   }
 ]

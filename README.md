@@ -20,7 +20,7 @@
 
 ### Вариант 1: Скачать одним архивом (рекомендуется)
 
-1. Скачайте готовый архив расширения: **[AdBlockFilms-v1.0.0.zip](https://github.com/Stepan-Warriors/AdBlockFilms/raw/main/AdBlockFilms-v1.0.0.zip)**.
+1. Скачайте готовый архив расширения: **[AdBlockFilms.zip](https://github.com/Stepan-Warriors/AdBlockFilms/raw/main/AdBlockFilms.zip)**.
 2. Распакуйте архив в любую удобную папку (например, `C:\Extensions\AdBlockFilms`).
 3. Откройте браузер на базе Chromium (**Google Chrome**, **Яндекс Браузер**, **Microsoft Edge**, **Brave**, **Opera**) и перейдите на страницу расширений:
    - Chrome / Brave / Яндекс: `chrome://extensions`
@@ -44,10 +44,10 @@ git clone https://github.com/Stepan-Warriors/AdBlockFilms.git
 Обычный Google Chrome для Android не поддерживает сторонние расширения, но **AdBlockFilms** работает в мобильных браузерах на базе Chromium:
 
 1. Установите **Kiwi Browser** (или **Lemur Browser** / **Mises Browser**) из Google Play.
-2. Скачайте на телефон архив **[AdBlockFilms-v1.0.0.zip](https://github.com/Stepan-Warriors/AdBlockFilms/raw/main/AdBlockFilms-v1.0.0.zip)**.
+2. Скачайте на телефон архив **[AdBlockFilms.zip](https://github.com/Stepan-Warriors/AdBlockFilms/raw/main/AdBlockFilms.zip)**.
 3. Откройте меню браузера (`⋮` справа вверху) → **Extensions** (Расширения).
 4. Включите **Developer mode** (Режим разработчика).
-5. Нажмите **`+ (from .zip/.crx/.user.js)`** (в Kiwi) или выберите загрузку `.zip` / распакованной папки и укажите скачанный `AdBlockFilms-v1.0.0.zip`.
+5. Нажмите **`+ (from .zip/.crx/.user.js)`** (в Kiwi) или выберите загрузку `.zip` / распакованной папки и укажите скачанный `AdBlockFilms.zip`.
 6. Готово — управлять расширением можно через меню `⋮` → **AdBlockFilms**.
 
 #### iPhone и iPad (iOS)

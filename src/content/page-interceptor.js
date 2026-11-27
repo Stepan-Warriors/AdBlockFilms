@@ -66,6 +66,16 @@
     'highperformanceformat.com',
     'effectivegatecpm.com',
     'clickadu.com',
+    'suprion.ru',
+    'video-mech.ru',
+    'bidster.net',
+    'veonadx.com',
+    'mplays.ru',
+    'qtarget.tech',
+    'rutarget.ru',
+    'programmatica.com',
+    'adlook.me',
+    'adlook.tech',
   ];
 
   const YOUTUBE_HOST_RE = /(^|\.)(youtube\.com|youtube-nocookie\.com)$/i;
