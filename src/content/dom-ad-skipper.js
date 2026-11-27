@@ -272,6 +272,19 @@
       return { isAd: true, authoritative: false, reason: 'ad-badge' };
     }
 
+    // 4. Dual-video overlay: short video playing on top of a paused main movie video
+    if (container && Number.isFinite(video.duration) && video.duration > 0.5 && video.duration <= 120) {
+      const siblingVideos = container.querySelectorAll('video');
+      if (siblingVideos.length >= 2) {
+        const hasOtherPausedMovie = [...siblingVideos].some(
+          (other) => other !== video && (other.paused || !Number.isFinite(other.duration) || other.duration > 300)
+        );
+        if (hasOtherPausedMovie && !video.paused) {
+          return { isAd: true, authoritative: false, reason: 'dual-video-overlay' };
+        }
+      }
+    }
+
     return { isAd: false, authoritative: false, reason: '' };
   }
 

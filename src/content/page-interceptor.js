@@ -76,6 +76,9 @@
     'programmatica.com',
     'adlook.me',
     'adlook.tech',
+    'adlook.tv',
+    'moviead55.ru',
+    'myangular.life',
   ];
 
   const YOUTUBE_HOST_RE = /(^|\.)(youtube\.com|youtube-nocookie\.com)$/i;

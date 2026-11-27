@@ -190,6 +190,9 @@
         "programmatica.com",
         "adlook.me",
         "adlook.tech",
+        "adlook.tv",
+        "moviead55.ru",
+        "myangular.life",
         "moevideo.net",
         "moevideo.ru"
       ],
@@ -229,6 +232,51 @@
     "action": { "type": "block" },
     "condition": {
       "urlFilter": "mstream2inline.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 16,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "linearVPAID.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 17,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "vpaid_widget.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 18,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "vpaidk.min",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 19,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "buzzlibrary.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 20,
+    "priority": 10,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "GIVPAID.js",
       "resourceTypes": ["script"]
     }
   }
